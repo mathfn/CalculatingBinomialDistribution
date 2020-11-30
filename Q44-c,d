@@ -1,50 +1,55 @@
-print("Insira os valores:")
-print("Agora, a variável x está variando em um intervalo [a,b], a,b sendo números naturais.")
+#O cálculo seguiu a seguinte sequência: 1 - o fator na forma binomial, 2 - o primeiro fator de potência x e 3 - o segundo e último fator de potência n-x 
+
+#1 - Cálculo do fator na forma binomial
+#Dados dois inputs, n e x (lê-se "n, escolhe x"), calcularemos o fatorial de n, o fatorial de x e o fatorial de n-x. Esse valor definirá a variável bn
+#Em seguida, definiremos duas variáveis, d1 para a potência de x e d2 para a potência de n-x
+#Por fim, o resultado será o produto bn*d1*d2
+
+#Inputs
+print("Agora, a variável x está variando em um intervalo [a,b], a,b sendo números naturais.") 
+ptint("Os limites deste intevalo são indicados pelos inputs x e y, respectivamente o menor e o maior valor.")
+
+print("Insira os valores.")
 
 x = int(input("x:"))
 y = int(input("y:"))
 n = int(input("n:"))
 p = float(input("p:"))
 
+#Cálculo
 soma = 0
+
+#A variável z é a variável global para a variação do valor x ao valor y inputado. O comando range vai até n-1, logo x, (y-1)+1 = x,y
+
 for z in range(x,y+1):
-  #Calculando o Binômio de Newton
+  #Calculando do número na forma binomial
   #Criando um algoritmo para o cálculo do fatorial n
   m = 1
   k = n
   for i in range(k):
     m = m*k
     k = k-1
-
   #Criando um algoritmo para o cálculo do fatorial x
   l = 1
   r = z 
   for j in range(r):
     l = l*r
     r = r-1
-
   #Definindo a diferença entre os dois fatoriais
   s = 1
   v = n-z
   for u in range(v):
     s = s*v
     v = v-1
-
-  #Definindo o cálculo pela fórmula
-
+  #Definindo o cálculo do número pela fórmula
   bn = m/(l*s)
 
-  #print("Binômio:",int(bn))
-
-  #Calculando aDistribuição Binomial
-
+  #Calculando a Distribuição Binomial
   d1 = (p**z)
-  #print("d1 = ", d1)
   d2 = (1-p)**(n-z)
-  #print("d2 = ", d2)
   resultado = bn*d1*d2
   soma = soma + resultado
  
-print("Soma", soma)
-print("Resultado = ", soma*100,"%")
+print("Resultado = ", soma)
+print("Percentualmente, resultado = ", soma*100,"%")
 
