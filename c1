@@ -1,0 +1,46 @@
+#O cálculo seguiu a seguinte sequência: 1 - o fator na forma binomial, 2 - o primeiro fator de potência x e 3 - o segundo e último fator de potência n-x 
+
+#1 - Cálculo do fator na forma binomial
+#Dados dois inputs, n e x (lê-se "n, escolhe x"), calcularemos o fatorial de n, o fatorial de x e o fatorial de n-x. Esse valor definirá a variável bn
+#Em seguida, definiremos duas variáveis, d1 para a potência de x e d2 para a potência de n-x
+#Por fim, o resultado será o produto bn*d1*d2
+
+#Inputs
+print("Insira os valores:")
+
+x = int(input("x:"))
+n = int(input("n:"))
+p = float(input("p:"))
+
+#Calculando o número escrito na forma binomial 
+#Criando um algoritmo para o cálculo do fatorial n
+m = 1
+k = n
+for i in range(n):
+  m = m*k
+  k = k-1
+#Criando um algoritmo para o cálculo do fatorial x
+l = 1
+r = x 
+for j in range(x):
+  l = l*r
+  r = r-1
+#Definindo a diferença entre os dois fatoriais
+s = 1
+v = n-x
+for u in range(v):
+  s = s*v
+  v = v-1
+#Definindo o cálculo pela fórmula
+bn = m/(l*s)
+
+
+#Calculando aDistribuição Binomial
+d1 = (p**x)
+print("d1 = ", d1)
+d2 = (1-p)**(n-x)
+print("d2 = ", d2)
+resultado = bn*d1*d2
+
+print("Resultado = ", resultado)
+print("Percentualmente, o resultado é ", resultado*100,"%")
