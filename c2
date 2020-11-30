@@ -4,6 +4,7 @@
 #Dados dois inputs, n e x (lê-se "n, escolhe x"), calcularemos o fatorial de n, o fatorial de x e o fatorial de n-x. Esse valor definirá a variável bn
 #Em seguida, definiremos duas variáveis, d1 para a potência de x e d2 para a potência de n-x
 #Por fim, o resultado será o produto bn*d1*d2
+#O somatório será realizado por meio do laço for com a variável z e a variável soma
 
 #Inputs
 print("Agora, a variável x está variando em um intervalo [a,b], a,b sendo números naturais.") 
